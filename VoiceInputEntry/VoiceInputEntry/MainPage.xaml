@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VoiceInputEntry.MainPage">
+
+    <StackLayout BackgroundColor="Blue">
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                <GradientStop Color="Aquamarine" Offset="0.2"/>
+                <GradientStop Color="White" Offset="1.0"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="TextEntry" Placeholder="Zadej číslo" ClearButtonVisibility="WhileEditing" 
+                FontSize="Large" PlaceholderColor="LightGray" TextColor="DimGray" Visual="Material">
+            <Entry.Background>
+                <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                    <GradientStop Color="White" Offset="0.1"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="White" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Entry.Background>
+        </Entry>
+        <Button Text="Mluv" Command="{Binding SpeakCommand}"/>
+    </StackLayout>
+
+</ContentPage>
